@@ -18,9 +18,12 @@ from django.urls import path, include
 
 
 urlpatterns = [
+    # The Codes Below is How we Link up Every App Created to the Main Project URLS
+    # Settings, so that, the Project Identifies all the URL's from Every Individuall
+    # Applications and Runs THem without Errors.
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('smart/', include('notes.urls')),
+    path('', include('home.urls')), # App URLS in the HOME APP Created
+    path('smart/', include('notes.urls')), # All URL's from the Notes app created
 
 
 ]
