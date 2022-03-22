@@ -1,0 +1,25 @@
+# Creating Model Forms
+from django import forms
+from django.core.exceptions import ValidationError
+
+from .models import Notes
+
+
+class NotesForm(forms.ModelForm):
+    class Meta:
+        model = Notes
+        fields = ('title', 'text')
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control my-2'}),
+            'text' : forms.Textarea(attrs={'class':'form-control my-2'})
+        }
+        labels = {
+            'text' : 'Write your thoughts here:'
+        }
+
+    def clean_title(self):
+        title = self.cleaned_data['title']
+        # Remove the Block of codes Below to Remove the DJANGO conditionals
+        if 'Django' not in title:
+            raise ValidationError("We only accept notes about Django")
+        return title
