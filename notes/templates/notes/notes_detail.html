@@ -7,6 +7,7 @@
     <p>{{note.text}}</p>
 </div>
 <a href="{% url 'notes.list' %}" class="btn btn-secondary my-1">View All Notes</a>
-<a href="{% url 'notes.update' pk=note.id %}" class="btn btn-secondary my-3">Edit</a>
-<a href="{% url 'notes.delete' pk=note.id %}" class="btn btn-danger my-3">Delete</a>
+<a href="{% url 'notes.update' pk=note.id %}" class="btn btn-secondary my-3">Edit Note</a>
+<a href="{% url 'notes.delete' pk=note.id %}" class="btn btn-danger my-3">Delete Note</a>
 {% endblock %}
+
