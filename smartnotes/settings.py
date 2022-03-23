@@ -126,3 +126,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "boot"),
     '/boot/',
 ]
+
+LOGIN_REDIRECT_URL = '/smart/notes'
