@@ -14,7 +14,7 @@ class NotesForm(forms.ModelForm):
             'text' : forms.Textarea(attrs={'class':'form-control my-2'})
         }
         labels = {
-            'text' : 'Write your thoughts here:'
+            'text': 'Write your thoughts here:'
         }
 
     def clean_title(self):
